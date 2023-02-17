@@ -1,45 +1,60 @@
 # User-Registration-and-Login
 
-User Registration and Login Page Creation
-This project implements a user registration and login page using TypeScript, Angular, Node.js, MySQL, and Sequelize. The user interface is designed using Angular, and the server-side logic is implemented using Node.js with the help of Sequelize ORM for database access.
+### User Registration and Login Page using TypeScript, Angular, Node.js, MySQL, and Sequelize
 
-Features
-The project includes the following features:
+Node.js
+TypeScript
+Angular
+MySQL
+Sequelize
 
-User registration with email verification
-User login with email and password authentication
-Admin login with email and password authentication
-Password reset with email verification
-Protected routes for authenticated users
-Separate user and admin roles with appropriate access controls
-Technologies
-The project uses the following technologies:
+### Overview
 
-Angular 12.2.0 for the frontend
-Node.js 14.17.6 for the backend
-TypeScript 4.3.5 for the programming language
-MySQL 8.0.27 for the database
-Sequelize 6.6.5 for the ORM
-Installation
-To install the project, follow these steps:
+This project is an example of a user registration and login page created using TypeScript, Angular, Node.js, MySQL, and Sequelize. The application allows users to register an account, log in, and reset their password if they forget it. There are two types of users: normal users and admin users.
 
-Clone the repository to your local machine.
-Install Node.js and npm.
-Install MySQL and create a new database.
-Navigate to the project directory and run npm install.
-Configure the database settings in config/config.json.
-Run npx sequelize-cli db:migrate to create the database tables.
-Run npm start to start the server.
-Navigate to http://localhost:4200 to use the application.
-Usage
-To use the application, follow these steps:
+### Features
 
-Navigate to http://localhost:4200.
-Register as a new user and verify your email address.
-Log in as a user or an admin using your email and password.
-Use the password reset feature if you forget your password.
-Credits
-This project was created by Dinesh.
+1. User registration with validation
+2. User login with authentication
+3. Password reset with email verification
+4. Admin and normal user login
 
-License
-This project is licensed under the My own License.
+### Technologies Used
+
+1. TypeScript for improved type checking and syntax
+2. Angular for front-end development
+3. Node.js for server-side development
+4. MySQL for database management
+5. Sequelize for database ORM
+
+### Requirements
+
+1. Node.js version 14.17.6 or higher
+2. Angular version 12.2.7 or higher
+3. MySQL version 8.0.27 or higher
+
+### Installation
+
+Clone the repository: git clone [git@github.com:dinesh761/User-Registration-and-Login.git](git@github.com:dinesh761/User-Registration-and-Login.git)
+Install dependencies: npm install
+Run the application: ng serve
+
+### Usage
+
+1. Navigate to [http://localhost:4200/](localhost://4200/) in your web browser.
+2. Register a new account using the registration form.
+3. Log in to the application using your email and password.
+4. If you forget your password, click the "Forgot Password" link to reset it.
+5. Admin users can log in and access the admin dashboard.
+
+#### License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+#### Contributors
+
+[Dinesh - GitHub](https://github.com/dinesh761/)
+
+#### Acknowledgments
+
+This project was inspired by some references on Internet.
