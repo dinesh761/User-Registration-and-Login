@@ -35,9 +35,9 @@ This project is an example of a user registration and login page created using T
 
 ### Installation
 
-Clone the repository: git clone [git@github.com:dinesh761/User-Registration-and-Login.git](git@github.com:dinesh761/User-Registration-and-Login.git)
-Install dependencies: npm install
-Run the application: ng serve
+1. Clone the repository: git clone [git@github.com:dinesh761/User-Registration-and-Login.git](git@github.com:dinesh761/User-Registration-and-Login.git)
+2. Install dependencies: npm install
+3. Run the application: ng serve
 
 ### Usage
 
