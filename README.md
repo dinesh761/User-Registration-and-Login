@@ -1,13 +1,5 @@
 # User-Registration-and-Login
 
-### User Registration and Login Page using TypeScript, Angular, Node.js, MySQL, and Sequelize
-
-Node.js
-TypeScript
-Angular
-MySQL
-Sequelize
-
 ### Overview
 
 This project is an example of a user registration and login page created using TypeScript, Angular, Node.js, MySQL, and Sequelize. The application allows users to register an account, log in, and reset their password if they forget it. There are two types of users: normal users and admin users.
@@ -35,7 +27,7 @@ This project is an example of a user registration and login page created using T
 
 ### Installation
 
-1. Clone the repository: git clone [git@github.com:dinesh761/User-Registration-and-Login.git](git@github.com:dinesh761/User-Registration-and-Login.git)
+1. Clone the repository: **_git clone git@github.com:dinesh761/User-Registration-and-Login.git_**
 2. Install dependencies: npm install
 3. Run the application: ng serve
 
@@ -47,14 +39,14 @@ This project is an example of a user registration and login page created using T
 4. If you forget your password, click the "Forgot Password" link to reset it.
 5. Admin users can log in and access the admin dashboard.
 
-#### License
+### License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-#### Contributors
+### Contributors
 
 [Dinesh - GitHub](https://github.com/dinesh761/)
 
-#### Acknowledgments
+### Acknowledgments
 
 This project was inspired by some references on Internet.
