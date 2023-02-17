@@ -1,0 +1,298 @@
+<div class="register-title">
+  <h3 class="register" style="text-align: center">Sign Up</h3>
+</div>
+
+<div class="container">
+  <div
+    class="alert alert-danger alert-dismissible fade show"
+    style="display: none"
+    id="success-close"
+  >
+    <strong>Failed!</strong> Fill all the fields
+  </div>
+  <form #signupForm="ngForm" (ngSubmit)="signupUser(signupForm)">
+    <div class="mb-3">
+      <label for="firstname" class="form-label bg_colorSet">Firstname</label>
+      <input
+        required
+        type="text"
+        class="form-control"
+        id="exampleInputFirstname1"
+        aria-describedby="emailHelp"
+        name="firstname"
+        #firstname="ngModel"
+        ngModel
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="firstname.valid || firstname.untouched"
+      >
+        Firstname is required
+      </small>
+    </div>
+
+    <div class="mb-3">
+      <label for="lastname" class="form-label bg_colorSet">Lastname</label>
+      <input
+        required
+        type="text"
+        class="form-control"
+        id="exampleInputLastname1"
+        aria-describedby="emailHelp"
+        name="lastname"
+        #lastname="ngModel"
+        ngModel
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="lastname.valid || lastname.untouched"
+      >
+        Lastname is required
+      </small>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label bg_colorSet">Email</label>
+      <input
+        required
+        type="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name="email"
+        #email="ngModel"
+        ngModel
+        [class.is-invalid]="email.invalid && email.touched"
+      />
+      <div *ngIf="email.errors && email.invalid && email.touched">
+        <small class="text-danger" *ngIf="email.errors.required"
+          >Email id is required field</small
+        >
+        <small class="text-danger" *ngIf="email.errors.pattern"
+          >Enter the valid email id</small
+        >
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label bg_colorSet">Password</label>
+      <input
+        required
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        name="password"
+        #password="ngModel"
+        ngModel
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+        [class.is-invalid]="password.invalid && password.touched"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="password.valid || password.untouched"
+        >Password is required and must be follow the pattern</small
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="confirmpassword" class="form-label bg_colorSet"
+        >Confirm Password</label
+      >
+      <input
+        required
+        type="password"
+        class="form-control"
+        id="exampleInputConfirmPassword1"
+        name="confirmpassword"
+        #confirmpassword="ngModel"
+        ngModel
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+        [class.is-invalid]="confirmpassword.invalid && confirmpassword.touched"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="
+          password.value == confirmpassword.value || confirmpassword.untouched
+        "
+      >
+        Password and Confirm Password must be same</small
+      >
+    </div>
+    <label class="form-check-label bg_colorSet" for="gender"> Gender </label>
+    <div class="form-check">
+      <input
+        required
+        class="form-check-input"
+        type="radio"
+        value="male"
+        name="gender"
+        id="flexRadioDefault1"
+        ngModel
+        #gender="ngModel"
+      />
+      <label class="form-check-label bg_colorSet" for="gender"> Male </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        value="female"
+        name="gender"
+        id="flexRadioDefault2"
+        name="gender"
+        ngModel
+        #gender="ngModel"
+        checked
+      />
+      <label class="form-check-label bg_colorSet" for="gender"> Female </label>
+    </div>
+
+    <div class="mb-3">
+      <label for="dateofbirth" class="form-label bg_colorSet"
+        >Date of Birth
+      </label>
+      <input
+        required
+        type="date"
+        class="form-control"
+        id="start"
+        name="dateofbirth"
+        value="2020-01-01"
+        min="1970-01-01"
+        max="2021-06-01"
+        #date="ngModel"
+        ngModel
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-check-label bg_colorSet" for="phone"
+        >Mobile number</label
+      >
+
+      <input
+        type="tel"
+        required
+        id="phone"
+        class="form-control"
+        name="phone"
+        ngModel
+        #phone="ngModel"
+        pattern="[0-9]{10}"
+        [class.is-invalid]="phone.invalid && phone.touched"
+      />
+      <small class="text-danger" [class.d-none]="phone.valid || phone.untouched"
+        >Phone number is required</small
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="city" class="form-label bg_colorSet">City</label>
+      <input
+        required
+        type="text"
+        class="form-control"
+        id="exampleInputcity1"
+        aria-describedby="emailHelp"
+        name="city"
+        #city="ngModel"
+        ngModel
+        [class.is-invalid]="city.invalid && city.touched"
+      />
+      <small class="text-danger" [class.d-none]="city.valid || city.untouched"
+        >City field is required</small
+      >
+    </div>
+
+    <!--<label for="State" class="form-label bg_colorSet">State</label>
+    <select class="form-control bg_colorSet">
+      <option value="" class="option_tag">-- Select State --</option>
+      <option value="TamilNadu" class="option_tag">TamilNadu</option>
+      <option value="Karnataka" class="option_tag">Karnataka</option>
+      <option value="Telugana" class="option_tag">Telugana</option>
+    </select> -->
+
+    <label for="State" class="form-label bg_colorSet">State</label>
+    <select
+      class="form-select bg_colorSet"
+      aria-label="Default select example"
+      required
+      name="state"
+      #state="ngModel"
+      ngModel
+    >
+      <option value="" class="option_tag">-- Select State --</option>
+      <option value="TamilNadu" class="option_tag">TamilNadu</option>
+      <option value="Karnataka" class="option_tag">Karnataka</option>
+      <option value="Telugana" class="option_tag">Telugana</option>
+    </select>
+
+    <div class="mb-3">
+      <label for="country" class="form-label bg_colorSet">Country</label>
+      <input
+        required
+        type="text"
+        class="form-control"
+        id="exampleInputcountry1"
+        aria-describedby="emailHelp"
+        name="country"
+        #country="ngModel"
+        ngModel
+        [class.is-invalid]="country.invalid && country.touched"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="country.valid || country.untouched"
+        >Country field required</small
+      >
+    </div>
+
+    <label for="State" class="form-label bg_colorSet">Role</label>
+    <select
+      class="form-select bg_colorSet"
+      aria-label="Default select example"
+      required
+      name="role"
+      #role="ngModel"
+      ngModel
+    >
+      <option value="" class="option_tag">-- Select role --</option>
+      <option value="Admin" class="option_tag">Admin</option>
+      <option value="Normal" class="option_tag">Normal</option>
+    </select>
+
+    <div class="mb-3 form-check bg_colorSet">
+      <input
+        required
+        type="checkbox"
+        class="form-check-input"
+        id="exampleCheck1"
+      />
+      <label class="form-check-label bg_colorSet" for="exampleCheck1"
+        >Check me in</label
+      >
+    </div>
+    <div class="btn-allign">
+      <button
+        type="submit"
+        class="btn btn-outline-primary"
+        [disabled]="!signupForm.valid"
+      >
+        Sign Up
+      </button>
+    </div>
+
+    <div class="loginLink">
+      <!--  <small class="float" [routerLink]="['api/user/register']"
+      >Create an account
+    </small> -->
+      <p>
+        Have already account
+        <a class="aHove" href="http://localhost:4200/api/user/login"
+          >Sign In
+        </a>
+      </p>
+    </div>
+  </form>
+</div>
